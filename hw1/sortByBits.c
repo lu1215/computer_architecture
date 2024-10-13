@@ -88,7 +88,6 @@ void run_test(int* test_data, int test_len, int* expected_data, const char* test
         printf("%s: Failed\n", test_name);
     }
 
-    // 打印排序後的結果
     printf("Sorted: ");
     for (int i = 0; i < test_len; i++) {
         printf("%d ", sorted[i]);
@@ -97,19 +96,16 @@ void run_test(int* test_data, int test_len, int* expected_data, const char* test
 }
 
 int main() {
-    // 測試資料 1
     int test_data1[] = {0, 3, 4};
     int test_data1_len = 3;
     int ans_data1[] = {0, 4, 3};
     run_test(test_data1, test_data1_len, ans_data1, "Test 1");
 
-    // 測試資料 2
     int test_data2[] = {16, 8, 4, 2, 1};
     int test_data2_len = 5;
     int ans_data2[] = {1, 2, 4, 8, 16};
     run_test(test_data2, test_data2_len, ans_data2, "Test 2");
 
-    // 測試資料 3
     int test_data3[] = {0, 1, 2, 3, 4, 5, 6, 7, 8};
     int test_data3_len = 9;
     int ans_data3[] = {0, 1, 2, 4, 8, 3, 5, 6, 7};
